@@ -1,0 +1,196 @@
+:root {
+  --bg-color-: #fff0d1;
+  /* example: background-color: var(--bg-color-); */
+  --ghose-: #f8afc7;
+  --pink-: #f03271;
+  --lime-: #99eebf;
+  --red-: #d34a32;
+  /* example: color: var(--red-); */
+  --purpel-: #9967d3;
+  --yellow-: #feee62;
+  --blue-: #2cb6e4;
+  --green-: #0e7a2c;
+  --dark-purpel-: #170d41;
+  --box-radius-: 20px 0 20px 0;
+  /* example: border-radius: var(--box-radius-); */
+  --fit-radius-: 20px;
+  --full-radius-: 50%;
+  --letter-radius: 10px;
+  /* المرجو استخدامها في جميع الأزرار في خاصية hover */
+  --scale-: scale(1.2);
+  /* example: transform: var(--scale-); */
+}
+@font-face {
+  font-family: "Font Awesome 6 Free";
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url("../webfonts/fa-solid-900.woff2") format("woff2"),
+    url("../webfonts/fa-solid-900.ttf") format("truetype");
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  direction: rtl;
+  text-align: center;
+  background-color: #f5f5f5;
+  font-weight: 900;
+}
+h1 {
+  background-color: #af8b4c;
+  color: white;
+  padding: 10px 0;
+  margin: 0;
+}
+.letters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px 0;
+}
+.letter {
+  border: 2px dashed red;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  font-size: 28px;
+  position: relative;
+  background-color: #fff;
+  overflow: hidden; /* Ensure content stays within the circle */
+}
+.letter span {
+  position: absolute;
+  bottom: 0px; /* وضع النص فوق حافة الدائرة */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 9px; /* زيادة حجم النص */
+  background-color: #96dc7c;
+  padding: 0 10px; /* زيادة المسافة حول النص */
+  border-radius: 100px;
+  white-space: nowrap; /* منع التفاف النص */
+}
+.safeeq {
+  background-color: #ffd966;
+}
+.rakhee {
+  background-color: #d9ead3;
+}
+.muthaqal {
+  background-color: #cfe2f3;
+}
+.mutasaqi {
+  background-color: #f4cccc;
+}
+.mixed {
+  background: linear-gradient(45deg, #ffd966 50%, #cfe2f3 50%);
+}
+button {
+  background-color: transparent;
+  border: transparent;
+  padding: 10px 20px;
+  font-weight: bolder;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #f0f0f0;
+  border-color: #ccc;
+  color: #333;
+  transform: scale(1.1);
+}
+
+.rby {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.yellow {
+  width: 20px;
+  height: 20px;
+  background-color: var(--yellow-);
+  margin-left: 3px;
+}
+.blue {
+  width: 20px;
+  height: 20px;
+  background-color: var(--blue-);
+  margin-left: 3px;
+}
+.red {
+  width: 20px;
+  height: 20px;
+  background-color: #f4cccc;
+  margin-left: 3px;
+}
+.yellow-blue {
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(60deg, var(--yellow-), var(--blue-));
+  margin-left: 3px;
+}
+.highlight {
+  color: red;
+}
+
+@media screen and (max-width: 1400px) {
+  .letter {
+    width: 75px;
+    height: 75px;
+    font-size: 20px;
+  }
+  h1 {
+    font-size: 32px;
+  }
+  button {
+    padding: 8px 16px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .letter {
+    width: 70px;
+    height: 70px;
+    font-size: 18px;
+  }
+  h1 {
+    font-size: 28px;
+  }
+  button {
+    padding: 6px 12px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .letter {
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+  }
+  h1 {
+    font-size: 25px;
+  }
+  button {
+    padding: 4px 8px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .letter {
+    width: 50px;
+    height: 50px;
+    font-size: 12px;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  button {
+    padding: 4px 8px;
+  }
+}
